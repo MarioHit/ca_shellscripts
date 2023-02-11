@@ -19,7 +19,7 @@ public class Terre05 {
 				arg2 = Integer.valueOf(args[1]);
 			}
 			if ( arg1 != 0 && arg2 != 0) {
-				System.out.println(arg1+" div par "+arg2);
+				// System.out.println(arg1+" div par "+arg2);
 				int result = arg1/arg2;
 				int reste = arg1 % arg2;
 				System.out.println("Resulat: "+result);
