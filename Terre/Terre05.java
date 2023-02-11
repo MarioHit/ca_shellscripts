@@ -25,7 +25,6 @@ public class Terre05 {
 				System.out.println("Resulat: "+result);
 				System.out.println("Reste: "+reste);
 			}else {
-				//System.out.println(arg1+" div par "+arg2);
 				System.out.println("Erreur");
 			}
 
