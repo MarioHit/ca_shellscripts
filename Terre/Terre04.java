@@ -26,6 +26,6 @@ public class Terre04 {
 		}
 	}
 	private static boolean isNumeric(String str) {
-		return str != null && str.matches("^-?[0-9]+");
+		return str != null && str.matches("^-?\\+?[0-9]+");
 	}
 }
