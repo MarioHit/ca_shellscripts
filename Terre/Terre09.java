@@ -16,12 +16,18 @@ public class Terre09 {
                     // enlever le dernier qui correspond
                     // x² = carre , x= carre/x , x*x = carre
                     int racine = 0;
+                    int racineProche = 0;
                     for (int x = 1; x <= carre / x; x++) {
+                        racineProche = carre/x;
                         if (x * x == carre) {
                             racine = x;
                             System.out.println("racine de "+ i +"  = " + racine);
+                        } else {
+                            System.out.println(i+" > "+ x+"² = "+x*x+ " ~"+racineProche+" -->"+racineProche*racineProche);
                         }
-                        // System.out.println(i+" : "+ x+""+ " - " + racine);
+                    }
+                    if( racine == 0 ) {
+                        System.out.println(i+" n'as pa de racine mais le plus proche est "+racineProche);
                     }
                 } else {
                     System.out.println("Erreur : " + i);
