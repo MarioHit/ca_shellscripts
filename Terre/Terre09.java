@@ -37,9 +37,11 @@ public class Terre09 {
                     if( racine == 0 ) {
                        //  System.out.println("~~ racine de "+ i +" ~ " + racineProche +" pour "+racineProche*racineProche +" ou " + (racineProche+1) +" pour "+(racineProche+1)*(racineProche+1));
                         // System.out.println("---->racine de "+ i +" = " + Math.sqrt(carre));
+                        System.out.println("--0-->racine de "+ i +" = " + Math.sqrt(carre) +" : "+racineProche+"  pour à peu pres : "+racineProche*racineProche);
                         double in = 0;
                         double inm = 0;
-                        double in2 = 0;
+                        int in2 = 0;
+                        int in3 = 0;
                         double racineD2 = 0;
                         double racCentaine = 0;
                         double racMil = 0;
@@ -54,11 +56,11 @@ public class Terre09 {
                             if ( racineD2 < carreD) {
                                 racCentaine = racineD;
                             }
-                            //System.out.println(in2+" __ "+in+" - "+racineD +"² : "+ racineD2 +" ~ "+difference + " ~ "+carreD);
+                            // System.out.println(in2+" __ "+in+" - "+racineD +"² : "+ racineD2 +" ~ "+difference + " ~ "+carreD);
                             in += 0.1;
                             in2++;
                         }
-                        System.out.println("---->racine de "+ i +" = " + Math.sqrt(carre) +" : "+racCentaine+"  pour à peu pres : "+racCentaine*racCentaine);
+                        System.out.println("--1-->racine de "+ i +" = " + Math.sqrt(carre) +" : "+racCentaine+"  pour à peu pres : "+racCentaine*racCentaine);
                         double carreCentaine = racCentaine * racCentaine;
                         while ( carreCentaine < carreD) {
                             double x = inm / 10.0;
@@ -68,14 +70,13 @@ public class Terre09 {
                             if ( carreCentaine < carreD) {
                                 racMil = racineD;
                             }
-                            //System.out.println("**"+in2+" __ "+inm+" - "+racineD +"² : "+ racineD2 +" ~ "+difference + " ~ "+carreD);
+                            // System.out.println("**"+in3+" __ "+inm+" - "+carreCentaine +"² : "+ racineD2 +" ~ "+difference + " ~ "+carreD);
                             inm += 0.001;
-                            in2++;
+                            in3++;
                         }
-                        System.out.println("---->racine de "+ i +" = " + Math.sqrt(carre) +" : "+racMil+"  pour à peu pres : "+racMil*racMil);
+                        System.out.println("--2-->racine de "+ i +" = " + Math.sqrt(carre) +" : "+racMil+"  pour à peu pres : "+racMil*racMil);
 
                     }
-                    //System.out.println("---->racine de "+ i +" = " + Math.sqrt(carre) +" * :"+racine);
                 } else {
                     System.out.println("Erreur : " + i);
                 }
