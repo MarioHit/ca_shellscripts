@@ -18,7 +18,6 @@ public class Terre09 {
                     int racine = 0;
                     int racineProche = 0;
                     int racineP = 0;
-                    //System.out.println("---->racine de "+ i +" = " + Math.sqrt(carre));
                     for (int x = 1; x <= (carre/x); x++) {
                         racineProche = x;
                         if (x * x == carre) {
@@ -35,9 +34,7 @@ public class Terre09 {
                         }
                     }
                     if( racine == 0 ) {
-                       //  System.out.println("~~ racine de "+ i +" ~ " + racineProche +" pour "+racineProche*racineProche +" ou " + (racineProche+1) +" pour "+(racineProche+1)*(racineProche+1));
-                        // System.out.println("---->racine de "+ i +" = " + Math.sqrt(carre));
-                        System.out.println("--0-->racine de "+ i +" = " + Math.sqrt(carre) +" : "+racineProche+"  pour à peu pres : "+racineProche*racineProche);
+                        System.out.println("racine de "+ i +" = "+racineProche+" ~ "+racineProche*racineProche +" ("+ Math.sqrt(carre) +")");
                         double in = 0;
                         double inm = 0;
                         int in2 = 0;
@@ -60,7 +57,7 @@ public class Terre09 {
                             in += 0.1;
                             in2++;
                         }
-                        System.out.println("--1-->racine de "+ i +" = " + Math.sqrt(carre) +" : "+racCentaine+"  pour à peu pres : "+racCentaine*racCentaine);
+                        System.out.println("-racine de "+ i +" = "+racCentaine+" ~ "+racCentaine*racCentaine +" ("+ Math.sqrt(carre) +")");
                         double carreCentaine = racCentaine * racCentaine;
                         while ( carreCentaine < carreD) {
                             double x = inm / 10.0;
@@ -74,7 +71,7 @@ public class Terre09 {
                             inm += 0.001;
                             in3++;
                         }
-                        System.out.println("--2-->racine de "+ i +" = " + Math.sqrt(carre) +" : "+racMil+"  pour à peu pres : "+racMil*racMil);
+                        System.out.println("--racine de "+ i +" = " +racMil+" ~ "+racMil*racMil +" ("+ Math.sqrt(carre) +")");
 
                     }
                 } else {
