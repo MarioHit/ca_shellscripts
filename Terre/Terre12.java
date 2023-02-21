@@ -10,29 +10,26 @@ public class Terre12 {
             if( isFormatAnglais(i)) {
                 String[] data = i.split(":");
                 int heures = Integer.parseInt(data[0]);
+                boolean isHeure12 = heures == 12 ? true : false;
                 boolean isAM = data[1].contains("A");
                 boolean isPm  = !isAM;
-                int minutes = 0;
+                String minutes, heuresStr = "";
                 if ( isPm) {
-                    heures = heures == 12 ? heures : heures + 12;
-                    minutes = Integer.parseInt(data[1].split("P")[0]);
+                    heuresStr = "" + (isHeure12 ? heures : heures + 12) ;
+                    minutes = (data[1].split("P")[0]);
                 } else {
-                    heures = heures == 12 ? 0 :heures;
-                    minutes = Integer.parseInt(data[1].split("A")[0]);
+                    heuresStr = isHeure12 ? "00" : heures +"";
+                    minutes = (data[1].split("A")[0]);
                 }
-
-                String res = (heures == 0 ? "00" : heures)+":"+(minutes == 0 ? "00" : heures);
+                String res = heuresStr+":"+minutes;
                 System.out.println(i+" --> "+res);
-
-
-                //11:40 11:40AM 2:40 11:40PM 12:40PM 12:40AM 8:40PM 3:40PM 12:00AM 12:00PM 12:32PM 11:59AM 11:59PM
             } else {
-                System.out.println("Erreur : "+i+" n'est pas au bon format");
+                System.out.println("Erreur : '"+i+"' n'est pas au bon format");
             }
         }
     }
 
     public static boolean isFormatAnglais(String str) {
-        return str != null && str.matches("[0-9]{2}:[0-9]{2}[AP]M");
+        return str != null && str.matches("[0-9]?[0-9]:[0-9]{2}[AP]M");
     }
 }
