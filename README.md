@@ -29,4 +29,16 @@ Test after using the repo
     pour le cas de minuit et 12:
         si l'heure finale est 00
             Alors on met 12
+
+## Terre 12 : 12 to 24 
+
+    Créer un pgm qui prend une date au format AM et PM 
+    et qui le met au format 24h
+
+    on va donc : 
+    1. vérifer le format 
+    2. Split la partie des heures et celle des str
+    3. s'il s'agit de 12 et AM alors 00 
+    4. s'il s'agit de 12 et PM alors 12
+    5. s'il s'agit de PM alors hh + 12
     
