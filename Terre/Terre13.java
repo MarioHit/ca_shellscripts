@@ -6,36 +6,69 @@
 public class Terre13 {
     public static void main(String[] args) {
 
+        boolean erreur = false;
+        int init = 0;
+        int milieu = init;
+        String message = "Erreur : ";
+        String arg = " ";
+        for (String str :
+                args) {
+            arg += str+" ";
+        }
+        System.out.println("args:["+arg+"]");
         if ( args.length != 3) {
-            System.out.println("Erreur  il faut 3 argument " +args.length);
+            message += "il faut 3 argument, ici (" +args.length+")";
+            erreur = true;
         } else {
-            int init = 0;
             int initMax  = Integer.MIN_VALUE;
-            int petit = Integer.MAX_VALUE;
+            int initPetit = Integer.MAX_VALUE;
+            int petit = initPetit;
             int grand = initMax;
-            int milieu = init;
+            int[] num = new int[args.length];
+            int inc = 0;
             for (String s: args) {
                 if ( !isInteger(s)) {
-                    System.out.println("Erreur : '"+s+"' n 'est pas un entier");
+                    message += "'"+s+"' n'est pas un entier";
+                    erreur = true;
+                    break;
                 } else {
                     int chiffre = Integer.parseInt(s);
-                    petit = chiffre < petit ? chiffre : petit;
-                    if (chiffre > petit ) {
-                        if ( grand == initMax) {
+                    for (int i = 0; i < num.length; i++) {
+                        if( num[i] == chiffre) {
+                            message += "Pas de doublon SVP !!! ";
+                            erreur = true;
+                            break;
+                        }
+                    }
+                    num[inc] = chiffre;
+                    inc++;
+
+                    if (petit == initPetit) {
+                        milieu = chiffre;
+                    }
+                    petit = chiffre <= petit ? chiffre : petit;
+                    if (chiffre > petit) {
+                        if (grand == initMax) {
                             milieu = chiffre;
                             grand = chiffre;
                         }
-                        if ( chiffre < grand) {
+                        if (chiffre < grand) {
                             milieu = chiffre;
                         }
                         if (chiffre > grand) {
                             milieu = grand;
+                            grand = chiffre;
                         }
                     }
                     grand = chiffre > grand ? chiffre : grand;
-                    System.out.println( petit+" < "+ milieu + " < "+ grand);
+                    // System.out.println(chiffre + " : " + petit + " < " + milieu + " < " + grand);
+
                 }
             }
+        }
+        if(erreur) {
+            System.out.println(message);
+        } else {
             System.out.println(milieu);
         }
     }
