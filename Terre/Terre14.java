@@ -10,9 +10,8 @@ public class Terre14 {
         boolean erreur = false;
         String messageErreur = "Erreur : ";
         boolean trie = false;
-        boolean fin = false;
 
-        while (erreur == false && fin == false) {
+        while (erreur == false) {
             System.out.println(" --- : "+Integer.MIN_VALUE+"  --"+args.length);
             if (args.length < 2) {
                 messageErreur += " Mettez au moins 2 arguments!";
@@ -22,7 +21,7 @@ public class Terre14 {
                 int lastValue = Integer.MIN_VALUE;
                 for (String i : args) {
                     if (!isNum(i)) {
-                        messageErreur += " Mettez au moins 2 arguments!";
+                        messageErreur += "'"+i+"' N'est pas un chiffre !";
                         erreur = true;
                         break;
                     } else {
@@ -34,10 +33,10 @@ public class Terre14 {
                             trie = true;
                         }
                         lastValue = val;
-
+                        System.out.println(lastValue);
                     }
-                    fin = true;
                 }
+                break;
             }
         }
         String message =  erreur ? messageErreur : trie? "Triéé !!" : "Pas Triéé";
