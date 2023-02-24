@@ -53,4 +53,21 @@ Test after using the repo
     3. Trouver celui du milieu
         1. si ce n'est ni le plus grand 
         2. si ce n'est ni le plus pétit
-        
+
+### Terre14 : Trié ou pas 
+
+    Créer un programme qui prend un nombre d'entier en entrée
+    et qui vérifie si c'est trie 
+
+    1. Vérifier qu'il y'ait au moins 2 entrées
+    2. Vérifier que ce sont tous des entier
+    3. Transformer en entier 
+    4. Vérifier que i est plus grand que i+1
+        1. initialiser la valeur à Integer MIN
+        2. la comparer au premier
+        3. puis après chaque  i le mettre dedans
+        4. par la suite on compare le i avec la valeur de l'ancier
+        5. break si c'est n'est pas supérieur. 
+    
+    on peut pousser plus loin l'éxo et voir les parties
+    qui sont trié ou non. 
