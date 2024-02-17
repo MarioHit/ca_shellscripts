@@ -25,33 +25,42 @@ public class Eau00 {
 
         /* création des indices pour chaque tableau
          */
-        int indice1, indice2, indice3 = 0;
+        int indice1 = 0, indice2, indice3 = 0;
 
         /* création de la string qui va contenir le résultat*/
         String combinaisonx = "";
 
 
         // boucler sur le 1er tableu
-        for (int x : premierChiffre) {
-            System.out.println(x);
+        for (int x=0;x<=9;x++ ) {
+            System.out.println("x_"+x);
             String combinaison = ""+x+"";
-            for ( int y : deuxiemeChiffre) {
+            for ( int y=x+1;y<=9;y++) {
+                System.out.println("y_"+y);
                 //vérifier qu'on passe au suicant
                 if( y > x) {
                     combinaison = combinaison+""+y+"";
                 }
-                System.out.println("combin xy :"+ combinaison);
+                //System.out.println("combin xy :"+ combinaison);
 
-                for(int z : troisiemeChiffre){
+                for(int z=y+1;z<=9;z++){
+                    System.out.println("z_"+z);
                     //vérifier qu'on passe au suicant
                     if( z > y) {
                         combinaison = combinaison+""+z+"";
                         listeCombinaison.add(combinaison+",");
-                        System.out.println("combin xyZ :"+ combinaison);
+                        System.out.println(""+indice1+"--combin xyZ : x"+x+" y"+y+" z"+z+" : "+ combinaison);
                         combinaison = ""+x+y+"";
+                        if( z == 9 ) {
+                            combinaison = ""+x+"";
+                        }
+                        indice1++;
+
+
                     }
 
                 }
+                System.out.println(listeCombinaison.size());
 
             }
         }
