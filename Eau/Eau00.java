@@ -25,12 +25,10 @@ public class Eau00 {
         for (int x=0;x<=9;x++ ) {
             String combinaison = ""+x+"";
             for ( int y=x+1;y<=9;y++) {
-                //vérifier qu'on passe au suicant
                 if( y > x) {
                     combinaison = combinaison+""+y+"";
                 }
                 for(int z=y+1;z<=9;z++){
-                    //vérifier qu'on passe au suicant
                     if( z > y) {
                         listeCombinaison.add(combinaison+""+z);
                         //System.out.println("combin xyZ : x"+x+" y"+y+" z"+z+" : "+ combinaison);

@@ -1,6 +1,6 @@
 # Eau
 
-###Eau00 : Combinaisons de 3 chiffres
+### Eau00 : Combinaisons de 3 chiffres
     
     Créez un programme qui affiche toutes les différentes combinaisons possibles de trois chiffres dans l’ordre croissant, dans l’ordre croissant. La répétition est volontaire.
     
@@ -40,7 +40,7 @@ notions :
     - gestion des erreurs
 
 
-###Eau01 : Combinaisons des 2 chiffres
+### Eau01 : Combinaisons des 2 chiffres
     Créez un programme qui affiche toutes les différentes combinaisons de deux nombre entre 00 et 99 dans l’ordre croissant.
 
 
@@ -58,7 +58,7 @@ notions :
 
 
 notions : 
-        - tableau
-        - gestion des strings 
-        - gestion des erreurs
+- tableau
+- gestion des strings
+- gestion des erreurs
 
