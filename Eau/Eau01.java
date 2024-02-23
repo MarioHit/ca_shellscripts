@@ -19,6 +19,8 @@ public class Eau01 {
     }
 
     private static void afficherCombinasons2nombre() {
+        Long startTime = System.nanoTime();
+        Long startTime2 = System.currentTimeMillis();
         // création du tableau qui va contenir les combinaisons
         ArrayList<String> listeCombinaison = new ArrayList<>();
 
@@ -32,6 +34,16 @@ public class Eau01 {
             }
         }
         afficherListe(listeCombinaison);
+        long endTime = System.nanoTime();
+        System.out.println(System.nanoTime() - startTime );
+        System.out.println(System.currentTimeMillis() - startTime2 );
+
+
+        // Calculer la durée en convertissant les nanosecondes en secondes
+        long duration = (endTime - startTime);  // Durée en nanosecondes
+        System.out.println("\nTemps d'exécution: " + duration + " nanosecondes");
+        // Ou convertir la durée en millisecondes pour une meilleure lisibilité
+        System.out.println("Temps d'exécution: " + duration/1000000 + " millisecondes");
     }
 
     private static void afficherListe(ArrayList<String> listeCombinaison) {

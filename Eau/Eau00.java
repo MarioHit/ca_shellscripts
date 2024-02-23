@@ -16,6 +16,9 @@ public class Eau00 {
     }
 
     private static void combinaisonTroisChiffre() {
+
+        long startTime = System.nanoTime();
+
         /* création du tableu qui va contenir des résultat
         *  on va utiliser un arrylist car on ne connait pas la taille
         * */
@@ -42,6 +45,13 @@ public class Eau00 {
         }
 
         afficherListe(listeCombinaison);
+        long endTime = System.nanoTime();
+
+        // Calculer la durée en convertissant les nanosecondes en secondes
+        long duration = (endTime - startTime);  // Durée en nanosecondes
+        System.out.println("\nTemps d'exécution: " + duration + " nanosecondes");
+        // Ou convertir la durée en millisecondes pour une meilleure lisibilité
+        System.out.println("Temps d'exécution: " + duration/1000000 + " millisecondes");
     }
 
     private static void afficherListe(ArrayList<String> listeCombinaison) {
