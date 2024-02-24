@@ -84,11 +84,49 @@ notions :
     
     Afficher error et quitter le programme en cas de problèmes d’arguments.
 
+        Solution : 
+    - boucler sur les args en commenceant par le dernier
+    - afficher les elemts un à un 
 
+    - utilisere une stack 
+        - la remplir en bouclan sur les args
+        - faire un boucle while sur la stack et enlever chaque élément avec .pop() 
+        - puis l"afficher 
+        - avec la stack on boucle 2 fois!!!
 
 notions :
 - gèrer les arguments en entrée
 - tableau
 - boucler dans l'autre sens / utiliser une stack
+- gestion des strings 
+- gestion des erreurs
+
+
+### Eau03 : Suite de Fibonacci
+    Créez un programme qui affiche le N-ème élément de la célèbre suite de Fibonacci. (0, 1, 1, 2) étant le début de la suite et le premier élément étant à l’index 0.
+
+    
+    Exemples d’utilisation :
+    $> python exo.py 3
+    2
+    $>
+    
+    Afficher -1 si le paramètre est négatif ou mauvais.
+
+    Solution : 
+    - comprendre c'est quoi fibonaci : 
+    - faire un tableau trié contenant la suite
+    - regler l'index avec le test pour trouver le bon N eme element en entrée
+    - savoir quand s'arreter si pas d'entrée
+
+
+
+notions :
+- suite de fibonacci :
+    un tableau contenant O et 1  ,puis le chiffre est égale à la somme des deux précents , dans l'index-1 , et index-2
+  0 1 1 2 3 5 8 13 21 34 55 89 144 
+  Xn = Xn-1 + Xn_2
+- gèrer les arguments en entrée
+- tableau
 - gestion des strings 
 - gestion des erreurs
