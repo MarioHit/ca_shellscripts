@@ -1,38 +1,29 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *Créez un programme qui affiche le N-ème élément de la célèbre suite de Fibonacci. (0, 1, 1, 2) étant le début de la suite et le premier élément étant à l’index 0.
- */
-
 public class Eau03 {
-    public static void main(String[] args) {
+
+    public static List<Integer> calculerSuiteFibonacci(int n) {
         List<Integer> listeSuite = new ArrayList<>();
-        listeSuite.add(0,0);
-        listeSuite.add(1,1);
+        listeSuite.add(0); // Premier élément de la suite
+        listeSuite.add(1); // Deuxième élément de la suite
 
-        if (args.length == 1 && isNumeric(args[0])){
-            //prendre le chiffre en entrée
-            int entrée = Integer.valueOf(args[0]);;
-            // remplir le tableau
-            for ( int a = 2; a <= entrée; a++) {
-                listeSuite.add(a, (listeSuite.get(a-1) + listeSuite.get(a-2)));
-            }
+        for (int i = 2; i <= n; i++) {
+            listeSuite.add(listeSuite.get(i - 1) + listeSuite.get(i - 2));
+        }
 
-            // Affichage du debug
-            for( int i : listeSuite) {
-                System.out.print(i+", ");
-            }
-            System.out.println("\nentréé  : "+entrée+"  > "+listeSuite.get(entrée));
+        return listeSuite;
+    }
 
+    public static void main(String[] args) {
+        if (args.length == 1 && isNumeric(args[0])) {
+            int entree = Integer.parseInt(args[0]);
+            List<Integer> listeSuite = calculerSuiteFibonacci(entree);
 
-            // affichage du résultat
-            System.out.println(listeSuite.get(entrée));
-
+            System.out.println("Entrée : " + entree + " > " + listeSuite.get(entree));
         } else {
             System.out.println("Erreur argument");
         }
-
     }
 
     private static boolean isNumeric(String str) {
