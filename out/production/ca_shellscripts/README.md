@@ -128,6 +128,40 @@ notions :
   Xn = Xn-1 + Xn_2
 - gèrer les arguments en entrée
 - tableau
-- boucler dans l'autre sens / utiliser une stack
 - gestion des strings 
 - gestion des erreurs
+
+
+### Eau04 : Prochain nombre premier
+
+``` 
+Créez un programme qui affiche le premier nombre premier supérieur au nombre donné en argument.
+
+
+Exemples d’utilisation :
+$> python exo.py 14
+17
+$>
+
+Afficher -1 si le paramètre est négatif ou mauvais.
+
+```
+
+#### Solution
+* comprendre les chiffre premier
+* créer un algo pour les mettre dans un tableau
+* bucler sur un tableau
+* transformer entrée en int
+*comparer le chiffre en entrée pour comprendre
+
+####Tests :
+* les entrée est ce qu'il y a quelque chose
+* voir si c'est un string ou un int
+* tester l'exemple en entrée
+
+#### Notions vu :
+* comprendre formule chiffre premier : 
+  c'est tout chiffre supérieur à 1 , qui est uniquement divisible par 1 et par lui même.  
+  donc pour ça je vais utiliser un modulo : s'il est égal à zéro c'est que c'est divisible
+* gèrer les entrées / erreurs
+* boucler sur un tableau 
