@@ -164,4 +164,68 @@ Afficher -1 si le paramètre est négatif ou mauvais.
   c'est tout chiffre supérieur à 1 , qui est uniquement divisible par 1 et par lui même.  
   donc pour ça je vais utiliser un modulo : s'il est égal à zéro c'est que c'est divisible
 * gèrer les entrées / erreurs
-* boucler sur un tableau 
+* boucler sur un tableau
+    * boucler avec while et ++
+    * arreter une boucle 
+
+
+
+### Eau05 : String dans string
+
+``` 
+Créez un programme qui détermine si une chaîne de caractère se trouve dans une autre.
+
+
+Exemples d’utilisation :
+$> python exo.py bonjour jour
+true
+
+
+$> python exo.py bonjour joure
+false
+
+
+$> python exo.py 42
+error
+
+Afficher error et quitter le programme en cas de problèmes d’arguments.
+
+```
+
+#### Solution
+* prendre les deux arguments
+* comparer une à une
+* si une lettre de la second est dans le premier
+    * alors on compare les suivant jusqu'à ce que le deuxième mot soit fini
+    * si  une de lettres est fausse
+    
+
+* on peue aussi prendre le premier lettre du 2eme mot
+* l'utiliser pour split le premier mot ,
+* le spliter encore à la fin à la taille du 2eme mot
+* puis comparer juste les deux tableau ,
+    * si c'est pas égale
+    * passer à la prochaine lettre de la 1er,
+    * si c'est bon , on a notre répeition
+
+
+* créer un algo pour les mettre dans un tableau
+* bucler sur un tableau
+* transformer entrée en int
+  *comparer le chiffre en entrée pour comprendre
+
+####Tests :
+* les entrée est ce qu'il y a quelque chose
+* voir si c'est un string
+* vérifier le split
+* comparer 2 tableau 
+* tester l'exemple en entrée
+
+#### Notions vu :
+* gèrer les entrées / erreurs
+* gerer les strings
+* boucler sur un tableau
+    * boucler avec while et ++
+    * arreter une boucle 
+    
+
