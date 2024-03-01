@@ -226,6 +226,6 @@ Afficher error et quitter le programme en cas de problèmes d’arguments.
 * gerer les strings
 * boucler sur un tableau
     * boucler avec while et ++
-    * arreter une boucle 
+    * arreter une boucle
     
 
